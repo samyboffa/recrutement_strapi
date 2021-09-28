@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "type": {
-      "type": "string",
-      "required": true
-    },
     "creator": {
       "type": "string",
       "required": true
@@ -28,45 +24,21 @@
       "type": "date",
       "required": true
     },
-    "mainimg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
-    },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "Introduction": {
-      "type": "string",
-      "required": true
-    },
-    "intro_company_title": {
-      "type": "text",
-      "required": true
-    },
-    "intro_campany": {
-      "type": "richtext",
-      "required": true
-    },
-    "job_description_title": {
       "type": "string",
       "required": true
     },
     "job_description": {
       "type": "richtext",
       "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ophtalmologue",
+        "orthoptiste"
+      ],
+      "default": "ophtalmologue"
     }
   }
 }
